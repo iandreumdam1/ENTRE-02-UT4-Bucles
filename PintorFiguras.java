@@ -21,7 +21,7 @@ public class PintorFiguras
      */
     public  void dibujarFigura(int altura) {
         int alturaFigura = altura;
-        for (int fila = 1; fila <= 6; fila ++){
+        for (int fila = 1; fila <= altura; fila ++){
             escribirEspacios(ESPACIO, ((alturaFigura * 2) - 2));
             for(int col = 1; col <= fila; col++){
                 if(col % 2 == 0){
@@ -34,7 +34,7 @@ public class PintorFiguras
                 System.out.println();
             }
         }
-        //me sale todo en la misma columna
+        //me sale mal
     }
 
     /**
@@ -42,8 +42,8 @@ public class PintorFiguras
      */
     private  void escribirEspacios(char caracter, int n) {
          for(int fila = 1; fila <= n; fila++){
-             System.out.println(caracter);
+             System.out.print(caracter);
          }
-         //me sale todo en la misma columna
+         
     }
 }
