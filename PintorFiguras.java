@@ -2,7 +2,7 @@
 /**
  *  Clase que dibuja una figura 
  * 
- * @author - 
+ * @author - Ibai Andreu
  *  
  */
 public class PintorFiguras
@@ -20,14 +20,30 @@ public class PintorFiguras
      * (usa bucles for)
      */
     public  void dibujarFigura(int altura) {
-        
+        int alturaFigura = altura;
+        for (int fila = 1; fila <= 6; fila ++){
+            escribirEspacios(ESPACIO, ((alturaFigura * 2) - 2));
+            for(int col = 1; col <= fila; col++){
+                if(col % 2 == 0){
+                    escribirEspacios(CAR2, ANCHO_BLOQUE);
+                }
+                else{
+                    escribirEspacios(CAR1, ANCHO_BLOQUE);
+                }
+                alturaFigura--;
+                System.out.println();
+            }
+        }
+        //me sale todo en la misma columna
     }
 
     /**
      * Método privado de ayuda que escribe n espacios en la misma línea
      */
     private  void escribirEspacios(char caracter, int n) {
-         
-
+         for(int fila = 1; fila <= n; fila++){
+             System.out.println(caracter);
+         }
+         //me sale todo en la misma columna
     }
 }
